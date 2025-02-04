@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".VerFacturaActivity"
+    android:background="@color/background">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:layout_marginBottom="35dp"
+                android:text="@string/Facturas"
+                android:fontFamily="sans-serif-black"
+                android:textAlignment="center"
+                android:textSize="35sp" />
+
+            <TextView
+                android:id="@+id/textViewId"
+                android:layout_width="300dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="40dp"
+                android:textAlignment="center"
+                android:text="@string/idFactura"
+                android:background="@drawable/redondeo_bordes"
+                android:layout_marginBottom="20dp"
+                />
+
+            <TextView
+                android:id="@+id/textViewFecha"
+                android:layout_width="300dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="40dp"
+                android:textAlignment="center"
+                android:text="@string/FechaFactura"
+                android:background="@drawable/redondeo_bordes"
+                android:layout_marginBottom="20dp"/>
+
+            <TextView
+                android:id="@+id/textViewCliente"
+                android:layout_width="300dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="40dp"
+                android:textAlignment="center"
+                android:text="@string/Clientes"
+                android:background="@drawable/redondeo_bordes"
+                android:layout_marginBottom="20dp"/>
+
+            <TextView
+                android:id="@+id/textViewDetalle"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/redondeo_bordes"
+                android:text="@string/detalle"
+                android:textAlignment="center"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/textViewSubTotal"
+                android:layout_width="300dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="40dp"
+                android:textAlignment="center"
+                android:fontFamily="sans-serif-black"
+                android:text="@string/subtotal"
+                android:background="@drawable/redondeo_bordes"
+                android:textSize="16sp"
+                android:layout_marginBottom="20dp"/>
+
+            <TextView
+                android:id="@+id/textViewIva"
+                android:layout_width="300dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="40dp"
+                android:textAlignment="center"
+                android:fontFamily="sans-serif-black"
+                android:text="@string/IVA"
+                android:background="@drawable/redondeo_bordes"
+                android:textSize="16sp"
+                android:layout_marginBottom="20dp"/>
+
+            <TextView
+                android:id="@+id/textViewTotal"
+                android:layout_width="300dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="40dp"
+                android:textAlignment="center"
+                android:fontFamily="sans-serif-black"
+                android:text="@string/total"
+                android:background="@drawable/redondeo_bordes"
+                android:textSize="16sp"
+                android:layout_marginBottom="20dp"/>
+
+            <TextView
+                android:id="@+id/textViewColeccion"
+                android:layout_width="300dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="40dp"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:text="@string/coleccion"
+                android:background="@drawable/redondeo_bordes"
+                android:layout_marginBottom="20dp"/>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginBottom="20dp">
+
+                <Button
+                    android:id="@+id/buttonAnterior"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:text="@string/btnAnterior"
+                    android:layout_marginTop="10dp"
+                    android:alpha="0"/>
+                <ImageView
+                    android:id="@+id/back"
+                    android:layout_width="150dp"
+                    android:layout_height="70dp"
+                    android:alpha="0.9"
+                    android:contentDescription="@string/btnAnterior"
+                    app:srcCompat="@drawable/back_foreground" />
+
+
+                <Button
+                    android:id="@+id/buttonSiguiente"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="220dp"
+                    android:text="@string/btnSiguiente"
+                    android:layout_marginTop="10dp"
+                    android:alpha="0"/>
+                <ImageView
+                    android:id="@+id/Next"
+                    android:layout_width="155dp"
+                    android:layout_height="70dp"
+                    android:layout_marginStart="230dp"
+                    android:alpha="0.9"
+                    android:contentDescription="@string/next"
+                    app:srcCompat="@drawable/next_foreground" />
+            </FrameLayout>
+            <FrameLayout
+                android:layout_width="370dp"
+                android:layout_height="70dp">
+                <Button
+                    android:id="@+id/buttonNueva"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/nuevaFra"
+                    android:layout_marginBottom="20dp"
+                    android:alpha="0"/>
+                <ImageView
+                    android:id="@+id/addFactura"
+                    android:layout_width="375dp"
+                    android:layout_height="65dp"
+                    android:contentDescription="@string/NewFactura"
+                    app:srcCompat="@mipmap/add_factura_product_round" />
+
+                <TextView
+                    android:layout_width="120dp"
+                    android:layout_height="20dp"
+                    android:layout_marginTop="52dp"
+                    android:layout_marginStart="150dp"
+                    android:textAllCaps="true"
+                    android:textSize="15sp"
+                    android:fontFamily="sans-serif-black"
+                    android:text="@string/agregar" />
+            </FrameLayout>
+            <FrameLayout
+                android:layout_width="370dp"
+                android:layout_height="70dp">
+                <Button
+                    android:id="@+id/buttonCancelar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cancel"
+                    android:layout_marginTop="21dp"
+                    android:alpha="0"/>
+                <ImageView
+                    android:id="@+id/menu"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="15dp"
+                    android:contentDescription="@string/Menu"
+                    app:srcCompat="@mipmap/menu_product_round" />
+            </FrameLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
